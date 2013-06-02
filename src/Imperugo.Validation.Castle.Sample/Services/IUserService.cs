@@ -1,6 +1,7 @@
 ﻿namespace Imperugo.Validation.Caslte.Sample.Services
 {
 	using System.ComponentModel.DataAnnotations;
+	using System.Text.RegularExpressions;
 
 	using Imperugo.Validation.Common.Attributes;
 

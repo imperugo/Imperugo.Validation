@@ -1,11 +1,11 @@
-﻿namespace Imperugo.Valdation.Castle.Interceptor
+﻿namespace Imperugo.Validation.Ninject.Interceptor
 {
 	using System.Reflection;
 
-	using global::Castle.DynamicProxy;
-
 	using Imperugo.Validation.Common.Attributes;
 	using Imperugo.Validation.Common.Validator;
+
+	using global::Ninject.Extensions.Interception;
 
 	public class ValidationInterceptor : IInterceptor
 	{
@@ -17,7 +17,8 @@
 
 		#region Constructors and Destructors
 
-		public ValidationInterceptor() : this(new DataAnnotationsValidator())
+		public ValidationInterceptor()
+			: this(new DataAnnotationsValidator())
 		{
 		}
 
@@ -32,7 +33,8 @@
 
 		public void Intercept(IInvocation invocation)
 		{
-			ParameterInfo[] parameters = invocation.Method.GetParameters();
+			ParameterInfo[] parameters = invocation.Request.Method.GetParameters();
+
 			for (int index = 0; index < parameters.Length; index++)
 			{
 				ParameterInfo paramInfo = parameters[index];
@@ -43,7 +45,7 @@
 					continue;
 				}
 
-				this.validator.Validate(invocation.Arguments[index]);
+				this.validator.Validate(invocation.Request.Arguments[index]);
 			}
 
 			invocation.Proceed();

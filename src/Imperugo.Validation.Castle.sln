@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imperugo.Validation.Castle.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imperugo.Validation.Castle.Sample", "Imperugo.Validation.Castle.Sample\Imperugo.Validation.Castle.Sample.csproj", "{D020C83D-5174-486F-9A1A-A5AD4BB554F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imperugo.Validation.Ninject", "Imperugo.Validation.Ninject\Imperugo.Validation.Ninject.csproj", "{C1172247-91E4-45E2-89A6-8CC1A9EA5062}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Castle", "Castle", "{0A075B8B-0239-443E-81F4-77305754B262}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ninject", "Ninject", "{5ECC6F53-59C4-43EE-B11D-0F1F303BDBC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,8 +37,18 @@ Global
 		{D020C83D-5174-486F-9A1A-A5AD4BB554F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D020C83D-5174-486F-9A1A-A5AD4BB554F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D020C83D-5174-486F-9A1A-A5AD4BB554F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1172247-91E4-45E2-89A6-8CC1A9EA5062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1172247-91E4-45E2-89A6-8CC1A9EA5062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1172247-91E4-45E2-89A6-8CC1A9EA5062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1172247-91E4-45E2-89A6-8CC1A9EA5062}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D020C83D-5174-486F-9A1A-A5AD4BB554F6} = {0A075B8B-0239-443E-81F4-77305754B262}
+		{1C4D2B8E-EBE3-4F3E-8CCA-AC3BEC4C692E} = {0A075B8B-0239-443E-81F4-77305754B262}
+		{B6E78C6B-28CF-4B9E-8B5F-B6B3D30F4469} = {0A075B8B-0239-443E-81F4-77305754B262}
+		{C1172247-91E4-45E2-89A6-8CC1A9EA5062} = {5ECC6F53-59C4-43EE-B11D-0F1F303BDBC5}
 	EndGlobalSection
 EndGlobal
